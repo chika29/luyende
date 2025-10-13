@@ -1,0 +1,183 @@
+/*   index  */
+.background-trangchu {
+  background-image: url('https://thichtrangtri.com/wp-content/uploads/2025/05/anh-phong-canh-chill-1.jpg');
+  background-size: cover;
+  /* phóng to full màn hình */
+  background-repeat: no-repeat;
+  /* không lặp lại */
+  background-position: center; 
+  
+ height: 100vh;
+}
+
+#logo {
+  position: absolute;
+  left: 70px;
+  top: 30px;
+
+  width: 120px;
+  /* chỉnh kích thước ngang */
+  height: 120px;
+  /* tự động giữ tỉ lệ ảnh */
+  display: block;
+  /* tránh khoảng trống dư thừa */
+  margin-right: 90px;
+  cursor: pointer;
+  /* hiện bàn tay khi hover */
+
+
+}
+
+.menu {
+  
+  list-style-type: none;  /* bỏ dấu chấm tròn đen */
+  display: flex;         
+  gap: 300px;
+  width: 300px;
+  height: 150px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 100px;
+  white-space: nowrap;
+  /* không cho xuống dòng chữ*/
+  font-size: 29px;
+  position: absolute;
+  left : 305px;
+  top:50px;
+}
+
+.menu a {
+  text-decoration: none;  /* bỏ dấu gạch chân */
+  color: white
+  
+}
+
+
+
+/*   video  */
+.background-video {
+  background-image: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/11/tai-hinh-nen-dep-mien-phi.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  
+
+}
+
+/*   Ôn Tập  */
+.background-ontap {
+  background-image: url('https://cdn.hostingviet.vn/data/tinymce/2023/hinh-nen-may-tinh-4k-1.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  
+
+}
+
+/*   luyện đề  */
+.background-luyende {
+  background-image: url('https://i.pinimg.com/736x/b2/46/8f/b2468f173babb6aacd76a75ba5d65056.jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  
+
+}
+
+/*   công thức  */
+.background-congthuc {
+  background-image: url('https://saigoncomputer.vn/uploads/hinh-nen-may-tinh-cuc-dep(4).jpg');
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  
+
+} 
+
+.daiso
+{
+  position: absolute;
+  top:370px;
+  left:200px;
+  color: rgb(247, 247, 247);           /* màu chữ */
+  font-size: 40px;  
+ 
+  
+}
+li {
+  line-height: 1.5; /* Điều chỉnh khoảng cách giữa các dòng trong cùng một mục */
+  margin-bottom: 15px; /* Tạo khoảng cách giữa các mục danh sách */
+}
+
+.daiso a
+{
+  color : white;
+}
+.hinhhoc
+{
+  position: absolute;
+  top:370px;
+  left:1300px;
+  color: rgb(247, 247, 247);           /* màu chữ */
+  font-size: 40px;  
+ 
+  
+}
+.hinhhoc a
+{
+  color : white;
+}
+
+/* --- Cấu hình chung cho mọi background --- */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll; /* đổi từ fixed -> scroll để tương thích mobile */
+}
+
+/* --- Trang chủ --- */
+.background-trangchu {
+  background-image: url('/chii.jpg');
+}
+
+/* --- Video --- */
+.background-video {
+  background-image: url('/chii.jpg');
+}
+
+/* --- Ôn tập --- */
+.background-ontap {
+  background-image: url('/chii.jpg');
+}
+
+/* --- Luyện đề --- */
+.background-luyende {
+  background-image: url('/chii.jpg');
+}
+
+/* --- Công thức --- */
+.background-congthuc {
+  background-image: url('/chii.jpg');
+}
+
+/* --- Tối ưu hiển thị cho điện thoại --- */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* giúp ảnh vừa khung dọc, không bị zoom */
+    background-attachment: scroll; /* tránh lỗi nhấp nháy trên iOS */
+    background-color: #000; /* nếu ảnh không phủ hết */
+  }
+
+  /* Nếu cần có padding cho nội dung tránh bị dính mép */
+  main, section {
+    padding: 12px;
+  }
+}

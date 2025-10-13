@@ -47,9 +47,21 @@
 }
 
 .menu a {
-  text-decoration: none;  /* bỏ dấu gạch chân */
-  color: white
-  
+  text-decoration: none;        /* bỏ gạch chân */
+  color: rgb(245, 205, 245);    /* màu chữ */
+  padding: 10px 25px;           /* tạo khoảng đệm trong */
+  border: 2px solid rgb(231, 181, 231); /* khung viền */
+  border-radius: 10px;          /* bo góc khung */
+  background-color: rgba(0, 0, 0, 0.4); /* nền mờ trong suốt */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* bóng đổ nhẹ */
+  transition: 0.3s;             /* hiệu ứng hover mượt */
+}
+
+/* Hiệu ứng khi rê chuột vào */
+.menu a:hover {
+  background-color: rgb(221, 124, 221); /* nền tím hồng */
+  color: white;                         /* chữ trắng */
+  box-shadow: 0 0 15px rgb(221, 124, 221); /* phát sáng */
 }
 
 

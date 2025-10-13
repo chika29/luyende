@@ -145,27 +145,27 @@ body {
 
 /* --- Trang chủ --- */
 .background-trangchu {
-  background-image: url('/chii.jpg');
+  background-image: url('../chii.jpg');
 }
 
 /* --- Video --- */
 .background-video {
-  background-image: url('/chii.jpg');
+  background-image: url('../chii.jpg');
 }
 
 /* --- Ôn tập --- */
 .background-ontap {
-  background-image: url('/chii.jpg');
+  background-image: url('../chii.jpg');
 }
 
 /* --- Luyện đề --- */
 .background-luyende {
-  background-image: url('/chii.jpg');
+  background-image: url('../chii.jpg');
 }
 
 /* --- Công thức --- */
 .background-congthuc {
-  background-image: url('/chii.jpg');
+  background-image: url('../chii.jpg');
 }
 
 /* --- Tối ưu hiển thị cho điện thoại --- */

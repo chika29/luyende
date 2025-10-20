@@ -1,0 +1,206 @@
+/* ====== CẤU HÌNH CHUNG ====== */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* nền cố định khi cuộn */
+  font-family: sans-serif;
+}
+
+/* --- Trang chủ & các trang khác --- */
+.background-trangchu,
+.background-video,
+
+.background-congthuc {
+  background-image: url('chii.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+/* ====== LOGO ====== */
+#logo {
+  position: absolute;
+  left: 70px;
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin-right: 90px;
+  cursor: pointer;
+}
+
+/* ====== MENU ====== */
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 300px;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  left: 305px;
+  margin: 30px 0 0 100px;
+  font-size: 29px;
+  white-space: nowrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgb(245, 205, 245);
+  padding: 10px 25px;
+  border: 2px solid rgb(231, 181, 231);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: rgb(221, 124, 221);
+  color: white;
+  box-shadow: 0 0 15px rgb(221, 124, 221);
+}
+
+/* ====== DANH SÁCH CHUNG ====== */
+li {
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* ====== ĐẠI SỐ ====== */
+.daiso {
+  position: absolute;
+  top: 370px;
+  left: 200px;
+  color: #f7f7f7;
+  font-size: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.daiso li {
+  margin: 10px 0;
+  padding: 10px 25px;
+  border: 2px solid rgb(231, 181, 231);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.daiso li:hover {
+  background-color: rgba(231, 181, 231, 0.2);
+  transform: scale(1.03);
+}
+
+.daiso a {
+  text-decoration: none;
+  color: rgb(245, 205, 245);
+  display: block;
+}
+
+/* ====== HÌNH HỌC ====== */
+.hinhhoc {
+  position: absolute;
+  top: 370px;
+  left: 1300px;
+  color: #f7f7f7;
+  font-size: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.hinhhoc li {
+  margin: 10px 0;
+  padding: 10px 25px;
+  border: 2px solid rgb(231, 181, 231);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.hinhhoc li:hover {
+  background-color: rgba(231, 181, 231, 0.2);
+  transform: scale(1.03);
+}
+
+.hinhhoc a {
+  text-decoration: none;
+  color: rgb(245, 205, 245);
+  display: block;
+}
+
+/* ====== VIDEO ====== */
+.video_cot_trai a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #f0d0f0;
+  border: 1px solid #d9aadd;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.4);
+  display: inline-block;
+  transition: 0.2s;
+}
+
+
+.video_cot_trai a:hover {
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
+}
+.video_cot_phai a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #f0d0f0;
+  border: 1px solid #d9aadd;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.4);
+  display: inline-block;
+  transition: 0.2s;
+}
+
+
+.video_cot_phai a:hover {
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
+}
+input[type="checkbox"] {
+    transform: scale(1.6); /* chỉnh to lên 1.6 lần */
+    margin-right: 8px;     /* cách chữ 1 chút cho đẹp */
+    cursor: pointer;       /* hiện bàn tay khi rê chuột */
+  }
+
+
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* vừa khung dọc */
+    background-attachment: scroll; /* tránh lỗi nhấp nháy */
+    background-color: #000;
+  }
+
+  main, section {
+    padding: 12px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .daiso, .hinhhoc {
+    position: static;
+    text-align: center;
+  }
+}

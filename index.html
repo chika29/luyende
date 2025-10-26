@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<!--
+1. h1 – h6 – heading     // tiêu đề
+2. p – paragraph    // nhập nội dung
+3. img – image   // chèn ảnh
+4. a – anchor      // chuyển hướng trang
+5. ul, li – unordered list, list item
+6. table     // tạo bảng
+7. input    // điền chữ vào cái ô
+8. button   // tao cái nút
+9. div
+-->
+
+<html>
+<!-- Phần đầu -->
+
+<head>
+
+    <link rel="stylesheet" href="main.css">    <!-- Liên kết CSS vào file html -->
+    <meta charset="utf-8">                     <!-- viết tiếng việt -->
+    <title>Trang Chủ</title>
+</head>
+
+
+
+<body class="background-trangchu">
+    
+
+    <a href="index.html" > <img src="background.webp" id="logo"> </a>  <!-- LOGO-->
+    <!-- Menu -->
+    <ul class="menu">
+       <li><a href="chucnang/video.html" style = "position: absolute ; top:0% ; left:50%;">Video</a></li>
+       <li><a href="chucnang/congthuc.html" style = "position: absolute ; top:0% ; left:210%;">FULL công thức</a></li>
+       <li><a href="https://drive.google.com/drive/folders/14i-b8BlJUNAs7aXAIM13nQ8E8-3tBVi1?usp=sharing" style = "position: absolute ; top:0% ; left:400%;">Casio</a></li>
+    </ul>
+
+ 
+  <style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("7d190749-1665-4c8e-acea-dfda08a98d6f.png") center/cover no-repeat;
+    font-family: "Segoe UI", Roboto, Arial;
+    overflow: hidden;
+  }
+
+  .envelope {
+    position: relative;
+    width: 420px;
+    min-height: 260px;
+    background: #ffb6c1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s;
+    box-shadow: 0 15px 40px rgba(255, 100, 130, 0.4);
+  }
+
+  .envelope:hover {
+    transform: scale(1.05);
+  }
+
+  .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 210px solid transparent;
+    border-right: 210px solid transparent;
+    border-bottom: 120px solid #ff8fa3;
+    transform-origin: top;
+    transition: transform 0.6s;
+  }
+
+  .letter-paper {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 380px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    color: #ff3366;
+    font-size: 18px;
+    line-height: 1.6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+  }
+
+  .open .flap {
+    transform: rotateX(180deg);
+  }
+
+  .open .letter-paper {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  .hint {
+    position: absolute;
+    top: calc(100% + 15px);
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    animation: fadeIn 2s infinite alternate;
+    transition: opacity 0.5s;
+  }
+
+  /* Khi thư mở thì ẩn hoàn toàn dòng "Ấn mở thư 💌" */
+  .open .hint {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+
+  /* Tim bay */
+  .heart {
+    position: absolute;
+    color: #ff5a79;
+    font-size: 20px;
+    animation: floatUp 3s ease-out forwards;
+    opacity: 0.9;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-150px) scale(1.8);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="letter-paper">
+     💌 Anh chúc em học tốt nhé ạ 🌸</b>
+    </div>
+    <div class="hint">Nhất định phải đọc💌</div>
+  </div>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+
+    envelope.addEventListener('click', () => {
+      // Toggle mở thư
+      const isOpen = envelope.classList.toggle('open');
+
+      // Khi mở thì thả tim ❤️
+      if (isOpen) {
+        for (let i = 0; i < 15; i++) {
+          const heart = document.createElement('div');
+          heart.classList.add('heart');
+          heart.textContent = '🌸';
+          heart.style.left = Math.random() * 100 + '%';
+          heart.style.bottom = '0';
+          heart.style.fontSize = (16 + Math.random() * 20) + 'px';
+          heart.style.animationDuration = (2 + Math.random() * 2) + 's';
+          document.body.appendChild(heart);
+
+          setTimeout(() => heart.remove(), 4000);
+        }
+      }
+    });
+  </script>
+
+</body>
+
+
+
+
+</html>
